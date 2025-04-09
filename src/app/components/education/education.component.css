@@ -1,0 +1,336 @@
+.education-section {
+  background-color: var(--bg-color);
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0; /* Remove default padding since it's handled in global styles */
+  margin: 0; /* Remove default margins */
+}
+
+/* Modern background elements */
+.education-section::before,
+.education-section::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  opacity: 0.08;
+  filter: blur(5px);
+  transition: all 10s ease-in-out;
+}
+
+.education-section::before {
+  background: linear-gradient(135deg, var(--primary-color) 0%, rgba(42, 157, 143, 0.4) 100%);
+  top: -100px;
+  left: -100px;
+  animation: float 15s infinite alternate ease-in-out;
+}
+
+.education-section::after {
+  background: linear-gradient(135deg, var(--accent-color) 0%, rgba(233, 196, 106, 0.4) 100%);
+  bottom: -100px;
+  right: -100px;
+  animation: float 12s infinite alternate-reverse ease-in-out;
+}
+
+/* Modern card layout */
+.education-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  margin-top: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.education-card {
+  flex: 1;
+  min-width: 320px;
+  max-width: 420px;
+  perspective: 1000px;
+}
+
+/* Enhanced card design */
+.card-content {
+  padding: 3rem;
+  position: relative;
+  text-align: center;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  height: 100%;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.card-content:hover {
+  transform: translateY(-15px) rotateX(5deg);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+}
+
+.card-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(42, 157, 143, 0.05) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-content:hover::before {
+  opacity: 1;
+}
+
+/* Styled education icon */
+.edu-icon {
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #1f796f 100%);
+  color: white;
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  margin: 0 auto 2rem;
+  box-shadow: 0 10px 25px rgba(42, 157, 143, 0.25);
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.card-content:hover .edu-icon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 15px 35px rgba(42, 157, 143, 0.35);
+}
+
+.card-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.card-content:hover h3 {
+  color: var(--primary-color);
+}
+
+.card-content h4 {
+  font-size: 1.15rem;
+  margin-bottom: 1.2rem;
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Styled period indicator */
+.period {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(233, 196, 106, 0.25);
+  transition: all 0.3s ease;
+}
+
+.card-content:hover .period {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(233, 196, 106, 0.35);
+}
+
+/* Enhanced badge design */
+.current-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #1f796f 100%);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0 16px 0 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(42, 157, 143, 0.2);
+  z-index: 10;
+}
+
+/* Modern inspirational quote */
+.education-quote {
+  margin-top: 6rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.quote-content {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 3.5rem;
+  position: relative;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+.quote-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+}
+
+.quote-content i {
+  font-size: 2.2rem;
+  color: var(--accent-color);
+  opacity: 0.4;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.quote-content p {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+.quote-content cite {
+  font-style: normal;
+  font-size: 1.05rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  display: block;
+  position: relative;
+}
+
+.quote-content cite::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background-color: var(--accent-color);
+  opacity: 0.5;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(20px, 20px) scale(1.05);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* Optimized responsive design */
+@media (max-width: 1200px) {
+  .education-container {
+    gap: 2.5rem;
+  }
+  
+  .education-card {
+    min-width: 300px;
+    max-width: 380px;
+  }
+  
+  .card-content {
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .education-section {
+    min-height: auto;
+  }
+
+  .education-card {
+    min-width: 280px;
+  }
+  
+  .quote-content {
+    padding: 2.8rem;
+    max-width: 90%;
+  }
+  
+  .quote-content p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .education-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  
+  .education-card {
+    width: 100%;
+    max-width: 450px;
+  }
+  
+  .quote-content {
+    padding: 2.2rem;
+  }
+  
+  .quote-content p {
+    font-size: 1.2rem;
+  }
+  
+  .edu-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-content {
+    padding: 2rem;
+  }
+  
+  .quote-content {
+    padding: 1.8rem;
+  }
+  
+  .quote-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .quote-content i {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .edu-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+}

@@ -1,0 +1,46 @@
+<header [ngClass]="{'scrolled': isScrolled}">
+  <div class="container header-container">
+    <div class="logo">
+      <a href="#"><span class="highlight">Bleron</span> Shabiu</a>
+    </div>
+    
+    <nav [ngClass]="{'active': mobileMenuOpen}">
+      <ul>
+        <li><a (click)="scrollToSection('about')">About</a></li>
+        <li><a (click)="scrollToSection('experience')">Experience</a></li>
+        <li><a (click)="scrollToSection('education')">Education</a></li>
+        <li><a (click)="scrollToSection('skills')">Skills</a></li>
+        <li><a (click)="scrollToSection('contact')">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <div class="mobile-toggle" (click)="toggleMobileMenu()">
+      <span [ngClass]="{'open': mobileMenuOpen}"></span>
+      <span [ngClass]="{'open': mobileMenuOpen}"></span>
+      <span [ngClass]="{'open': mobileMenuOpen}"></span>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-container">
+    <div class="hero-content" data-aos="fade-right">
+      <h1>Bleron Shabiu</h1>
+      <h2><span class="typing-text">Senior DevOps Engineer</span></h2>
+      <p>Automating complex banking systems and streamlining processes through innovation</p>
+      <div class="cta-buttons">
+        <a (click)="scrollToSection('contact')" class="btn primary-btn">Contact Me</a>
+        <a (click)="scrollToSection('experience')" class="btn secondary-btn">My Work</a>
+      </div>
+    </div>
+    <div class="hero-image" data-aos="fade-left">
+      <div class="circle-bg"></div>
+      <!-- Profile image will be added with CSS -->
+    </div>
+  </div>
+  <div class="scroll-down">
+    <a (click)="scrollToSection('about')">
+      <span></span>
+    </a>
+  </div>
+</section>

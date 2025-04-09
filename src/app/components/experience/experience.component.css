@@ -1,0 +1,300 @@
+/* Modern experience section with clean timeline */
+.experience-section {
+  background-color: var(--bg-color);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0; /* Remove default padding since it's handled in global styles */
+}
+
+/* Container with optimal width */
+.experience-section .container {
+  max-width: 1600px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Modern background decorations */
+.experience-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, transparent 70%);
+  opacity: 0.07;
+  border-radius: 50%;
+  transform: translate(30%, -30%);
+}
+
+.experience-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(135deg, var(--accent-color) 0%, transparent 70%);
+  opacity: 0.07;
+  border-radius: 50%;
+  transform: translate(-20%, 20%);
+}
+
+/* Timeline container with improved spacing */
+.timeline {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 3rem;
+  position: relative;
+}
+
+/* Sleek timeline line */
+.timeline-line {
+  position: absolute;
+  width: 4px;
+  background: linear-gradient(to bottom, rgba(42, 157, 143, 0.2), rgba(42, 157, 143, 0.8));
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+/* Clean timeline item container */
+.timeline-item {
+  margin-bottom: 5rem;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding-left: 45px;
+}
+
+/* Make the last timeline item have no bottom margin */
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Modern timeline dots with subtle animation */
+.timeline-dot {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  left: 20px;
+  top: 30px;
+  transform: translateX(-50%);
+  z-index: 10;
+  box-shadow: 0 0 0 4px rgba(42, 157, 143, 0.2);
+  transition: all 0.3s ease;
+}
+
+.timeline-dot:hover {
+  transform: translateX(-50%) scale(1.2);
+  box-shadow: 0 0 0 6px rgba(42, 157, 143, 0.2);
+}
+
+.timeline-dot.current {
+  background: #28a745;
+  box-shadow: 0 0 0 4px rgba(40, 167, 69, 0.3);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 4px rgba(40, 167, 69, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(40, 167, 69, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 4px rgba(40, 167, 69, 0.3);
+  }
+}
+
+/* Modern card design for timeline content */
+.timeline-content {
+  width: 100%;
+  background: white;
+  border-radius: 16px;
+  padding: 32px 40px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Refined content styling */
+.date {
+  display: inline-block;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 14px;
+  background: rgba(42, 157, 143, 0.08);
+  padding: 6px 14px;
+  border-radius: 30px;
+  letter-spacing: 0.5px;
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.timeline-content h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1.8rem;
+  color: #555;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* Modern grid layout for responsibilities */
+.responsibilities ul {
+  padding-left: 1.4rem;
+  margin-bottom: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+.responsibilities ul li {
+  margin-bottom: 0.9rem;
+  line-height: 1.6;
+  position: relative;
+  padding-right: 0.5rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.responsibilities ul li::before {
+  content: "•";
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+  position: absolute;
+  left: -1.2rem;
+  top: -0.1rem;
+}
+
+/* Modern badge styling */
+.current-badge {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background-color: #28a745;
+  color: white;
+  padding: 7px 14px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+  letter-spacing: 0.5px;
+}
+
+/* Optimized responsive styles */
+@media (max-width: 1400px) {
+  .responsibilities ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .experience-section {
+    min-height: auto;
+  }
+  
+  .responsibilities ul {
+    grid-template-columns: 1fr;
+  }
+  
+  .timeline-content {
+    padding: 28px 30px;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-section .container {
+    width: 95%;
+    padding: 0 15px;
+  }
+
+  .timeline-content {
+    padding: 24px;
+  }
+  
+  .timeline-item {
+    padding-left: 35px;
+  }
+  
+  .date {
+    font-size: 0.85rem;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.4rem;
+  }
+  
+  .timeline-content h4 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .timeline-line {
+    left: 14px;
+  }
+  
+  .timeline-dot {
+    left: 14px;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .timeline-item {
+    padding-left: 30px;
+  }
+  
+  .timeline-content {
+    padding: 20px;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.3rem;
+  }
+  
+  .responsibilities ul li {
+    font-size: 0.9rem;
+    margin-bottom: 0.7rem;
+    line-height: 1.5;
+  }
+  
+  .current-badge {
+    top: -10px;
+    right: -10px;
+    padding: 5px 10px;
+  }
+}

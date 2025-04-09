@@ -1,0 +1,39 @@
+<section id="skills" class="section skills-section">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>Technical Skills</h2>
+      <p>My expertise and proficiencies</p>
+    </div>
+    
+    <div class="skills-container">
+      <div *ngFor="let category of skillCategories; let i = index" class="skill-category" 
+           [attr.data-aos]="'fade-up'" 
+           [attr.data-aos-delay]="120 + (i * 70)">
+        <div class="category-header">
+          <h3>{{ category.name }}</h3>
+        </div>
+        
+        <div class="skills-grid">
+          <div *ngFor="let skill of category.skills; let j = index" class="skill-item rounded-card"
+              [attr.data-aos]="'zoom-in'" 
+              [attr.data-aos-delay]="180 + (j * 70)">
+            <div class="skill-icon">
+              <i [class]="skill.icon"></i>
+            </div>
+            <div class="skill-info">
+              <h4>{{ skill.name }}</h4>
+              <div class="skill-bar-container">
+                <div class="skill-bar" [style.width.%]="skill.level">
+                  <span class="skill-percentage">{{ skill.level }}%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="circle-decoration circle-1"></div>
+  <div class="circle-decoration circle-2"></div>
+</section>

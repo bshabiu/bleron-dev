@@ -1,0 +1,23 @@
+<section id="education" class="section education-section">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>Education</h2>
+      <p>My academic background</p>
+    </div>
+    
+    <div class="education-container">
+      <div *ngFor="let edu of educations; let i = index" class="education-card" 
+           [attr.data-aos]="'fade-up'" 
+           [attr.data-aos-delay]="120 + (i * 70)">
+        <div class="card-content rounded-card">
+          <div class="edu-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3>{{ edu.degree }}</h3>
+          <h4>{{ edu.institution }}</h4>
+          <p class="period">{{ edu.period }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

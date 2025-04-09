@@ -1,0 +1,32 @@
+<section id="experience" class="section experience-section">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>Work Experience</h2>
+      <p>My professional journey and roles</p>
+    </div>
+    
+    <div class="timeline">
+      <!-- Main vertical line -->
+      <div class="timeline-line"></div>
+      
+      <!-- Timeline items -->
+      <div *ngFor="let exp of experiences; let i = index" class="timeline-item" data-aos="fade-up" [attr.data-aos-delay]="i * 70">
+        <!-- Timeline dot -->
+        <div class="timeline-dot"></div>
+        
+        <!-- Timeline content -->
+        <div class="timeline-content">
+          <span class="date">{{ exp.period }}</span>
+          <h3>{{ exp.title }}</h3>
+          <h4>{{ exp.company }}</h4>
+          
+          <div class="responsibilities">
+            <ul>
+              <li *ngFor="let resp of exp.responsibilities">{{ resp }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

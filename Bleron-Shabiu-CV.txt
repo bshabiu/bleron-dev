@@ -1,0 +1,90 @@
+www.linkedin.com/in/bleron-shabiu-
+30373a196
+Bleron
+Shabiu
+Senior DevOps
+Engineer
+bleronshabiuu@gmail.com
++383-45928034
+Rr.Beqir Kastrati OBJ.3 HY.3 NR.37,
+Prishtine 10000 . Kosovo
+About Me
+Enthusiastic Senior DevOps Engineer with a strong background in automating complex banking
+systems. Known for a passion for streamlining processes through innovative automation solutions.
+Skilled in scripting, problem-solving, and thriving under challenging environments.
+Work Experience
+Senior DevOps Engineer
+Quipu GmbH
+November 2024 to Present
+Automated AKS Cluster Creation with Terraform : Designed and implemented
+Terraform pipelines in Azure DevOps to automate the provisioning of Azure
+resources, including AKS clusters, Azure Container Registry (ACR), Managed
+Identities, SignalR, and Key Vault, improving deployment efficiency and
+consistency.
+Infrastructure as Code (IaC) Implementation : Leveraged Terraform to define
+and manage cloud infrastructure, ensuring scalability, security, and compliance with
+best practices.
+Datadog Monitoring Integration : Configured and deployed Datadog monitoring
+agents across diverse environments, including Windows VMs, SQL databases, and
+AKS clusters, using Ansible for seamless agent installation and configuration.
+Ansible Pipeline Development : Built automated Ansible pipelines to streamline
+the deployment and management of monitoring agents, reducing manual effort and
+ensuring consistent monitoring across all systems.
+Senior DevOps Engineer
+Raiffeisen Bank Kosova (Raiffeisen Tech)
+January 2023 to November 2024
+Architected and deployed an infrastructure-agnostic container runtime platform
+(Cortex) tailored for hybrid cloud workloads, aligning with stringent banking
+requirements.
+Led the development of an open platform (DevPortal) using Backstage by Spotify,
+unifying the software development lifecycle with a streamlined UX for developer
+portals.
+Implemented and optimized CI/CD pipelines using ArgoCD and ArgoWorkflow,
+driving efficiency in deployment processes.
+Managed SSL/TLS/MTLS certificate systems within the Kong API Gateway,
+ensuring robust security for web services.Engineered and maintained the OpenShift Kubernetes platform (OKD) on AWS,
+enhancing scalability and performance.
+Designed and deployed CloudFormation templates, defining critical infrastructure
+components including VPCs, subnets, EC2 instances, and RDS databases.
+Orchestrated Lambda and Step Functions for automation, supporting various
+project requirements with tailored solutions.
+Automated configuration management using Ansible, developing custom
+playbooks and in-house libraries for infrastructure management.
+Implemented Helm and Kustomize for streamlined application deployment and
+customization, diverging from standard app catalogs/manifests.
+Utilized monitoring tools such as Grafana, Prometheus, Kibana (OpenSearch), and
+DataDog for comprehensive system oversight.
+Integrated Single Sign-On (SSO) solutions across multiple platforms, enhancing
+security and user experience.
+Application Administrator
+Quipu GmbH
+May 2022 to January 2023 (8 months)
+Managed the administration of .NET applications, ensuring seamless deployment
+and performance across banking systems.
+Developed and automated release cycles for critical banking applications,
+leveraging MySQL for database management.
+Created and maintained automation scripts using Windows PowerShell, Python,
+Batch, and VBScript, streamlining complex banking processes.
+Administered Apache and Tomcat web services, ensuring high availability and
+performance.
+Handled support and deployment of operational banking software systems,
+guiding installations and configurations through the entire release cycle.
+Utilized ticketing systems like MSP and Gemini for issue tracking and resolution.
+Unix System Administrator
+TEB Sh.a
+Feb 2021 to May 2022 ( 1yr 4months)
+Administered Linux and Unix servers on RedHat OS, ensuring robust and secure
+banking operations.
+Implemented and maintained monitoring systems using Grafana and Zabbix,
+covering both Windows and Linux (RHEL) environments.
+Managed databases in MariaDB (MySQL), optimizing performance and reliability.
+Developed Bash scripts to automate various banking processes, improving
+efficiency and reducing manual workload.
+Education History
+Bachelors of Computer Science and
+Engineering
+Institution: UBT, Prishtina
+2021-Present
+Bachelors of Engineering Technology
+Institution: KU Leuven, Leuven, Belgium
+2019-2021
